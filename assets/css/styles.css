@@ -185,6 +185,21 @@ img {
     top: 40px;
 }
 
+/* Ornament Stars */
+.home__stars-left, .home__stars-rigth{
+    position: absolute;
+}
+.home__stars-left{
+    left: 0;
+    top: -5.0625rem;
+    width: 6.75rem;
+}
+.home__stars-rigth{
+    right: 0;
+    top: -10.625rem;
+    width: 2.75rem;
+}
+
 /* ----------------| Wedding |--------------- */
 .wedding{
     background-color: var(--second-color);
@@ -674,6 +689,16 @@ img {
         right: 106px;
         top: 74px;
     }
+    .home__stars-left{
+        left: 1.5rem;
+        top: -12.0625rem;
+        width: 12.75rem;
+    }
+    .home__stars-rigth{
+        right: 0;
+        top: -15.625rem;
+        width: 4.75rem;
+    }
 
     .wedding{
         padding-bottom: 10.75rem;
@@ -722,6 +747,16 @@ img {
     }
     .home__text-f{
         right: 240px;
+    }
+    .home__stars-left{
+        left: 6.5rem;
+        top: -15.0625rem;
+        width: 14.75rem;
+    }
+    .home__stars-rigth{
+        right: 4.9375rem;
+        top: -10.625rem;
+        width: 6.75rem;
     }
 
     .wedding{
