@@ -193,16 +193,18 @@ img {
     justify-content: center;
     align-items: center;
     padding-top: 80px;
-    z-index: 1;
+    padding-bottom: 90px;
 }
 .wedding-wave{
     position: absolute;
     top: -5rem;
     width: 100%;
+    z-index: 1;
 }
 .wedding__container{
     text-align: center;
     position: relative;
+    z-index: 10;
 }
 .wedding__disc-ball{
     position: relative;
@@ -278,22 +280,6 @@ img {
     animation: rotateDiscoBallMiddle 18s linear infinite;
 }
 
-.wedding__stars{
-    position: absolute;
-    animation: scala 5s infinite;
-    z-index: 12;
-}
-@keyframes scala{
-    50% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 .wedding__names{
     font-family: var(--karoly-font-family);
     font-size: 38px;
@@ -322,22 +308,6 @@ img {
     font-size: 20px;
 }
 
-/*Ornaments*/
-.weddind__stars-left, .weddind__stars-rigth{
-    position: absolute;
-    animation: scala 5s infinite;
-}
-.weddind__stars-left{
-    left: 0;
-    top: 7.25rem;
-    width: 80px;
-}
-.weddind__stars-rigth{
-    right: 0;
-    top: 8.5rem;
-    width: 50px;
-}
-
 /* ----------------| Events |--------------- */
 .events{
     background-color: var(--third-color);
@@ -349,8 +319,10 @@ img {
 }
 .events__container{
     justify-items: center;
-    padding: 3.75rem 0;
+    padding-top: 3.75rem;
+    padding-bottom: 7rem;
     height: 100%;
+    z-index: 10;
 }
 .events__title{
     text-align: center;
@@ -361,6 +333,7 @@ img {
     display: grid;
     gap: 4.375rem;
     text-align: center;
+    grid-template-columns: repeat(2, 1fr);
 }
 .events__card{
     display: flex;
@@ -370,12 +343,12 @@ img {
     row-gap: .5rem;
 }
 .events__ornament{
-    width: 75px;
+    width: 65px;
 }
 .events__circle{
     background-color: var(--text-color);
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
     border-radius: 100%;
     position: relative;
     display: flex;
@@ -383,28 +356,11 @@ img {
     align-items: center;
 }
 .events__text{
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-family: var(--font-semi-bold);
 }
 .events__time{
-    font-size: 1.5rem;
-}
-
-/*Ornaments*/
-.events__stars-left, .events__stars-rigth{
-    position: absolute;
-}
-.events__stars-left{
-    left: 0;
-    top: 7.5rem;
-    width: 6.25rem;
-    animation: scala 5s infinite;
-}
-.events__stars-rigth{
-    right: 0;
-    top: 8.375rem;
-    width: 6.875rem;
-    animation: scala 5s infinite;
+    font-size: 1.125rem;
 }
 
 /* ----------------| Register |--------------- */
@@ -416,10 +372,10 @@ img {
     align-items: center;
     padding-top: 5rem;
     bottom: -.3125rem;
-    z-index: 100;
 }
 .register__container{
     justify-items: center;
+    z-index: 10;
 }
 .register__title{
     font-family: var(--karoly-font-family);
@@ -501,23 +457,6 @@ img {
     transition: .3s;
 }
 
-/*Ornaments*/
-.register__stars-left, .register__stars-rigth{
-    position: absolute;
-}
-.register__stars-left{
-    left: 0;
-    top: 1.5rem;
-    width: 6.25rem;
-    animation: scala 5s infinite;
-}
-.register__stars-rigth{
-    right: 0;
-    top: 0.375rem;
-    width: 3.875rem;
-    animation: scala 5s infinite;
-}
-
 /* ----------------| Footer |--------------- */
 .footer{
     background-color: var(--fourth-color);
@@ -539,7 +478,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: 5;
     overflow: hidden;
 }    
 .shine {
@@ -552,7 +491,7 @@ img {
     background-position:center;
     background-size: 100% 100%;
     overflow: hidden;
-    z-index: -3;
+    z-index: 6;
     color: tansparent;
     -moz-opacity: 0.0;
     opacity: 0.0;
@@ -689,22 +628,18 @@ img {
         right: 68px;
     }
 
-    /*Ornaments*/
-    .weddind__stars-left{
-        top: 8.25rem;
-        width: 6.5625rem;
+    .events__ornament{
+        width: 75px;
     }
-    .weddind__stars-rigth{
-        top: 10.5rem;
-        width: 3.625rem;
+    .events__circle{
+        width: 1.875rem;
+        height: 1.875rem;
     }
-
-    /*Ornaments*/
-    .register__stars-left{
-        left: 2.6875rem;
+    .events__text{
+        font-size: 1.75rem;
     }
-    .register__stars-rigth{
-        right: 2.125rem;
+    .events__time{
+        font-size: 1.5rem;
     }
 }
 
@@ -765,43 +700,11 @@ img {
         font-size: 1.375rem;
     }
 
-    /*Ornaments*/
-    .weddind__stars-left{
-        width: 10.5625rem;
-    }
-    .weddind__stars-rigth{
-        width: 6.625rem;
-    }
-
     .events{
         padding-bottom: 5rem;
     }
     .events__content{
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    /*Ornaments*/
-    .events__stars-left{
-        left: 3.375rem;
-        top: -1.5rem;
-        width: 13.25rem;
-    }
-    .events__stars-rigth{
-        right: 2.375rem;
-        top: 1.375rem;
-        width: 11.875rem;
-    }
-
-    /*Ornaments*/
-    .register__stars-left{
-        left: 2.6875rem;
-        top: -2.0625rem;
-        width: 12.1875rem;
-    }
-    .register__stars-rigth{
-        right: 3.75rem;
-        top: -1.75rem;
-        width: 6.5rem;
     }
 }
 
@@ -844,15 +747,6 @@ img {
         font-size: 2rem;
     }
 
-    /*Ornaments*/
-    .weddind__stars-left{
-        top: 4.25rem;
-        width: 14.5625rem;
-    }
-    .weddind__stars-rigth{
-        width: 6.625rem;
-    }
-
     .events{
         padding-bottom: 10rem;
     }
@@ -879,28 +773,11 @@ img {
         background-color: var(--text-color);
     }
 
-    /*Ornaments*/
-    .events__stars-left{
-        top: 1.5rem;
-        width: 14.25rem;
-    }
-    .events__stars-rigth{
-        top: 3.375rem;
-        width: 13.875rem;
-    }
-
     .register__title{
         font-size: 4rem;
     }
     .register__img-curve{
         bottom: 0.625rem;
-    }
-    /*Ornaments*/
-    .register__stars-left{
-        left: 10.6875rem;
-    }
-    .register__stars-rigth{
-        right: 9.75rem;
     }
 }
 
@@ -923,24 +800,6 @@ img {
 
     .events{
         padding-bottom: 18.375rem;
-    }
-
-    /*Ornaments*/
-    .events__stars-left{
-        width: 22.25rem;
-    }
-    .events__stars-rigth{
-        width: 19.875rem;
-    }
-
-    /*Ornaments*/
-    .register__stars-left{
-        left: 22.6875rem;
-        top: 2.9375rem;
-    }
-    .register__stars-rigth{
-        top: .8125rem;
-        right: 22.75rem;
     }
 }
 
@@ -969,24 +828,6 @@ img {
 
     .wedding-wave{
         top: -28rem;
-    }
-
-    /*Ornaments*/
-    .events__stars-left{
-        left: 20.75rem;
-        width: 22.25rem;
-    }
-    .events__stars-rigth{
-        right: 26.0625rem;
-        width: 19.875rem;
-    }
-
-    /*Ornaments*/
-    .register__stars-left{
-        left: 38.6875rem;
-    }
-    .register__stars-rigth{
-        right: 37.75rem;
     }
 }
 
